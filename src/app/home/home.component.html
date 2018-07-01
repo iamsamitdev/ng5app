@@ -1,0 +1,28 @@
+<div class="container color-dark">
+  <div class="col">
+    <p>Add your list</p>
+  </div>
+  <div class="col">
+    <p>Your bucket list ({{itemCount}})</p>
+  </div>
+</div>
+
+<!-- เรามาเพิ่มส่วนของการทำเมนูส่วนี้กัน
+จริงๆ ควรจะปรับให้เรียบร้อยก่อน-->
+
+<!-- แล้วถ้าไมได้ใส่ส่วนนี้จะทำอย่างไร-->
+
+<!-- ก็ไม่มีปัญหาเพราะว่าหลายอย่างเราควบคุมได้อยู่-->
+
+<div class="container color-light">
+  <div class="col">
+    <form>
+      <input type="text" name="item" class="txt" placeholder="Add new list" [(ngModel)]="listText">
+      <input type="submit" value="{{btnText}}" class="btn" (click)="addItem()">
+      <br>{{listText}}
+    </form>
+  </div>
+  <div class="col">
+    <p class="life-container" *ngFor="let data of listall">{{data}}</p>
+  </div>
+</div>
